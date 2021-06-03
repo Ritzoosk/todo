@@ -65,14 +65,10 @@ const ToDo = (props)=> {
           <h2 className="text-center bg-dark m-1 p-3 text-light">
           To Do List Manager ({count}) 
           </h2>
-        
-
         <section className="todo">
-
           <div>
             <TodoForm handleSubmit={addItem} />
           </div>
-
           <div className = "mx-auto w-50">
             <TodoList
               list={list}

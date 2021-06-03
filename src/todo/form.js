@@ -2,27 +2,11 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+import useForm from '../hooks/useForm.js'
 
-const TodoForm = (props)=> {
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { item: {} };
-  // }
-  const [item, setItem] = useState({});
-
-  const handleInputChange = (e) => {
-    setItem( {...item, [e.target.name]: e.target.value } );
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    e.target.reset();
-    props.handleSubmit(item);
-    const newItem = {};
-    setItem(newItem);
-  };
-
+export default function TodoForm(props) {
+  const[formData, setFormData] = useState({});
+  const[values, handleInputChange, handleSubmit] = useForm(props.handleSubmit)
 
     return (
       <>
@@ -51,4 +35,4 @@ const TodoForm = (props)=> {
   
 }
 
-export default TodoForm;
+
