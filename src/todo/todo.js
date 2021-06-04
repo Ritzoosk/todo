@@ -44,6 +44,9 @@ const ToDo = (props)=> {
       { _id: 3, complete: false, text: 'Walk the Dog', difficulty: 4, assignee: 'Person B'},
       { _id: 4, complete: true, text: 'Do Homework', difficulty: 3, assignee: 'Person C'},
       { _id: 5, complete: false, text: 'Take a Nap', difficulty: 1, assignee: 'Person B'},
+      { _id: 6, complete: false, text: 'Walk the Dog again', difficulty: 4, assignee: 'Person A'},
+      { _id: 7, complete: true, text: 'Do Homework again', difficulty: 3, assignee: 'Person A'},
+      { _id: 8, complete: false, text: 'Take another Nap', difficulty: 1, assignee: 'Person A'},
     ];
 
     setList(list);
